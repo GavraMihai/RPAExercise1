@@ -77,7 +77,11 @@
       <Variable x:TypeArguments="sd:DataTable" Name="sampleExcelDTFiltered" />
       <Variable x:TypeArguments="s:String[]" Name="regions" />
       <Variable x:TypeArguments="sd:DataTable" Name="sampleExcelDTSorted" />
-      <Variable x:TypeArguments="x:String" Default="C:\Users\Mihai Paul\Desktop\SampleExcel.xlsx" Name="readSamplePath" />
+      <Variable x:TypeArguments="x:String" Name="readSamplePath">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\&quot; + Environment.UserName + &quot;\Desktop\SampleExcel.xlsx&quot;" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
